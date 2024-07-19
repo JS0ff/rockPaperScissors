@@ -30,6 +30,7 @@ function playRound(humanSelection, compSelection) {
   humanSelection = humanSelection.toUpperCase();
   compSelection = compSelection.toUpperCase();
   if (humanSelection === "ROCK" && compSelection === "PAPER") {
+    // <----Computer Winner conditions
     console.log("You lose! Paper beats Rock");
     computerScore++;
   } else if (humanSelection === "PAPER" && compSelection === "SCISSORS") {
@@ -39,8 +40,10 @@ function playRound(humanSelection, compSelection) {
     console.log("You lose! Rock beats Scissors");
     computerScore++;
   } else if (humanSelection === compSelection) {
+    // <------Draw
     console.log("Draw!");
   } else if (humanSelection === "ROCK" && compSelection === "SCISSORS") {
+    // <----- Human winner conditions
     console.log("You win! Rock beats Scissors");
     humanScore++;
   } else if (humanSelection === "SCISSORS" && compSelection === "PAPER") {
@@ -51,12 +54,8 @@ function playRound(humanSelection, compSelection) {
     humanScore++;
   }
 }
-
-// const humanSelection = getHumanChoice();
-// const compSelection = getComputerChoice();
-// playRound(humanSelection, compSelection);
-
 function playGame() {
+  // Full game start
   i = 1;
   console.log(i);
   while (i < 6) {
