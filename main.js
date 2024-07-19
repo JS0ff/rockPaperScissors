@@ -55,3 +55,24 @@ function playRound(humanSelection, compSelection) {
 // const humanSelection = getHumanChoice();
 // const compSelection = getComputerChoice();
 // playRound(humanSelection, compSelection);
+
+function playGame() {
+  i = 1;
+  console.log(i);
+  while (i < 6) {
+    console.log(`Round number ${i}`);
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`${humanScore}: Your score`);
+    console.log(`${computerScore}: Computer score`);
+    i++;
+  }
+
+  if (humanScore > computerScore) {
+    console.log("You won!!!");
+  } else if (computerScore > humanScore) {
+    console.log("You lost!!!");
+  } else {
+    console.log("Drawwww!!!");
+  }
+}
+playGame();
