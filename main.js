@@ -57,7 +57,6 @@ function playRound(humanSelection, compSelection) {
 function playGame() {
   // Full game start
   i = 1;
-  console.log(i);
   while (i < 6) {
     console.log(`Round number ${i}`);
     playRound(getHumanChoice(), getComputerChoice());
