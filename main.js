@@ -1,7 +1,6 @@
 // Computer will randomly assign one of three Values:
 function getComputerChoice() {
   let compChoice = Math.floor(Math.random() * 3);
-
   if (compChoice === 0) {
     // <----- Rock
     compChoice = "Rock";
@@ -56,14 +55,16 @@ function playRound(humanSelection, compSelection) {
 }
 function playGame() {
   // Full game start
-  i = 1;
-  while (i < 6) {
-    console.log(`Round number ${i}`);
-    playRound(getHumanChoice(), getComputerChoice());
-    console.log(`${humanScore}: Your score`);
-    console.log(`${computerScore}: Computer score`);
-    i++;
-  }
+
+  //<--------------------REVISITING RPS LESSON---------------------->
+  //#1 Remove logic that plays 5 rounds
+  // i = 1;
+  // while (i < 6) {
+  // console.log(`Round number ${i}`);
+  playRound(getHumanChoice(), getComputerChoice());
+  console.log(`${humanScore}: Your score`);
+  console.log(`${computerScore}: Computer score`);
+  // i++;
   ``;
   if (humanScore > computerScore) {
     console.log("You won!!!");
